@@ -79,3 +79,5 @@ gem "elasticsearch-transport", "~> 6.1"
 gem "redis-namespace", "~> 1.6"
 
 gem "aws-sdk-s3", "~> 1.19"
+
+gem "mysql2", "~> 0.5.2"

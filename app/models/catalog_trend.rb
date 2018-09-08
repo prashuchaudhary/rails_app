@@ -1,0 +1,2 @@
+class CatalogTrend < ApplicationRecord
+end

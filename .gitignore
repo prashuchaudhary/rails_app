@@ -11,10 +11,11 @@
 /yarn-error.log
 /public/assets
 .byebug_history
-/config/master.key
-/config/database.yml
+config/master.key
 config/database.yml
-/config/database_sample.yml
-/config/redis_local.yml
-*database*
+config/database.yml
+config/database_sample.yml
+config/redis_local.yml
+config/schema.rb
 *.DS_Store
+Gemfile.lock

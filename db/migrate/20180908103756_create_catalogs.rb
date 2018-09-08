@@ -15,7 +15,7 @@ class CreateCatalogs < ActiveRecord::Migration[5.2]
       t.boolean :popularPriority
       t.interger :numSuppliers
       t.integer :numProducts
-      t.interger :category_id
+      t.interger :sub_sub_category_id
       t.integer :catalog_trend_id
       t.string :image, limit: 1000
       t.string :image128, limit: 1000

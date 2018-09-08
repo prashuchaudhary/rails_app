@@ -11,8 +11,8 @@ FactoryBot.define do
     images128 "MyString"
     images512 "MyString"
     imageCounter 1
-    created "2018-09-08 16:05:11"
+    created "2018-09-08 16:10:00"
     mrpPrice 1
-    rowLastUpdated "2018-09-08 16:05:11"
+    rowLastUpdated "2018-09-08 16:10:00"
   end
 end

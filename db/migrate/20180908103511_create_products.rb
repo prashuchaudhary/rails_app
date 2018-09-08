@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.boolean :valid
       t.string :name, limit: 1000
       t.string :description, limit: 2000
-      t.integer :catalogId
+      t.integer :catalog_id
       t.boolean :fullCatalog
       t.integer :weight
       t.string :sku, limit: 100

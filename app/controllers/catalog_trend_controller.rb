@@ -1,0 +1,2 @@
+class CatalogTrendController < ApplicationController
+end

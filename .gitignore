@@ -28,4 +28,7 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+config/master.key
+config/database.yml
+config/database_sample.yml
+config/redis_local.yml

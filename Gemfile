@@ -57,3 +57,25 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "sidekiq", "~> 5.2"
+
+gem "elasticsearch", "~> 6.1"
+
+gem "elasticsearch-rails", "~> 5.1"
+
+gem "elasticsearch-model", "~> 5.0"
+
+gem "redis", "~> 4.0"
+
+gem "redis-rails", "~> 5.0"
+
+gem "redis-store", "~> 1.5"
+
+gem "elasticsearch-api", "~> 6.1"
+
+gem "elasticsearch-transport", "~> 6.1"
+
+gem "redis-namespace", "~> 1.6"
+
+gem "aws-sdk-s3", "~> 1.19"

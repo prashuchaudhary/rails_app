@@ -52,6 +52,8 @@ group :development do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'faker'
+  gem 'hirb'
+  gem 'awesome_print'
 end
 
 

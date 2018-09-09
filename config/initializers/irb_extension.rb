@@ -5,7 +5,9 @@ module IRBExtension
 	end
 
 	def pre_init
-		require 'awesome_print'
-		AwesomePrint.irb!
+		if Rails.env.development?
+			require 'awesome_print'
+			AwesomePrint.irb!
+		end
 	end
 end

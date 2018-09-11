@@ -1,4 +1,4 @@
-module ElasticSearch
+module Elasticsearch
 	class RecordNotFound < StandardError
 	end
 

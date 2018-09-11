@@ -18,16 +18,21 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 module RailsApp
-  class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+	class Application < Rails::Application
+		# Initialize configuration defaults for originally generated Rails version.
+		config.load_defaults 5.2
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+		# Settings in config/environments/* take precedence over those specified here.
+		# Application configuration can go into files in config/initializers
+		# -- all .rb files in that directory are automatically loaded after loading
+		# the framework and any gems in your application.
+		config.autoload_paths += %W(#{config.root}/app/controllers/concerns)
+		config.autoload_paths += %W(#{config.root}/app/models/concerns)
+		config.autoload_paths << "#{config.root}/lib"
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
-  end
+		config.time_zone = 'Asia/Calcutta'
+		config.encoding = "utf-8"
+		# Don't generate system test files.
+		config.generators.system_tests = nil
+	end
 end

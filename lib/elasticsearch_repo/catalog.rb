@@ -78,12 +78,11 @@ module ElasticsearchRepo
 				}
 			)
 		end
-		# Base64 decode the "image" field in the document
-		#
+
 		def deserialize(document)
 			hash = document['_source']
-			hash['image512'] = Base64.decode64(hash['image512']) if hash['image512']
 			klass.new hash
 		end
+
 	end # Class Catalog
 end # Module ElasticsearchRepo

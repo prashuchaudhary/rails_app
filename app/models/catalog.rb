@@ -6,9 +6,9 @@ class Catalog < ApplicationRecord
 	belongs_to :sub_sub_category
 	belongs_to :catalog_trend
 
-	def index_to_es(record)
+	def index_to_es
 		catalog_repo = ::ElasticsearchRepo::Catalog.new(client: Elasticsearch::Model.client)
-		catalog_repo.save record
+		catalog_repo.save self
 	end
 
 end

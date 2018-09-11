@@ -49,12 +49,19 @@ module CatalogSearchable
 				 	format: "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
 				end
 				indexes :products, type: 'nested' do
-					indexes :id,								type: "long"
-					indexes :name,							analyzer:"indexing_analyzer", search_analyzer: "search_analyze"
-					indexes :description,				analyzer:"indexing_analyzer", search_analyzer: "search_analyze"
-					indexes :weight, 						type: "float"
+					indexes :id,							type: "long"
+					indexes :name,						analyzer:"indexing_analyzer", search_analyzer: "search_analyze"
+					indexes :description,			analyzer:"indexing_analyzer", search_analyzer: "search_analyze"
+					indexes :weight, 					type: "float"
 					indexes :sku,
 					indexes
+				end
+				indexes :catalog_trend, type: 'nested' do
+					indexes :name
+				end
+				indexes :sub_sub_category, type: 'nested' do
+					indexes :name
+					indexes :sub_category_id,  type: "long"
 				end
 			end
 		end
@@ -63,7 +70,7 @@ module CatalogSearchable
 			self.as_json(
 				include: {
 					catalogs: { only: [:id, :name, :description, :detail, :shareText, :image512, :activated]},
-
+					products: { only: [:id, :name, :weight, :sku] }
 					catalog_trend: { only: [:full_name] },
 					sub_sub_category: { only: :text }
 				}

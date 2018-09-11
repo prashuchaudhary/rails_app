@@ -1,14 +1,14 @@
 require 'elasticsearch_repo/catalog'
 
 class Catalog < ApplicationRecord
-	include CatalogSearchable
+
 	has_many :products
 	belongs_to :sub_sub_category
 	belongs_to :catalog_trend
 
-	def index_to_es
+	def index_to_es(record)
 		catalog_repo = ::ElasticsearchRepo::Catalog.new(client: Elasticsearch::Model.client)
-		catalog_repo.save(self)
+		catalog_repo.save record
 	end
 
 end
